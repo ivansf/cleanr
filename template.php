@@ -58,10 +58,9 @@ function cleanr_button($element) {
     return '<input type="submit" '. (empty($element['#name']) ? '' : 'name="'. $element['#name'] .'" ')  .'id="'. $element['#id'].'" value="'. check_plain($element['#value']) .'" '. drupal_attributes($element['#attributes']) ." />\n";
   }
   else {
-    return '<span class="button-wrapper"><span class="button"><span class="inner"><input type="submit" '. (empty($element['#name']) ? '' : 'name="'. $element['#name'] .'" ')  .'id="'. $element['#id'].'" value="'. check_plain($element['#value']) .'" '. drupal_attributes($element['#attributes']) ." /></span></span></span>\n";
-  }
+    return '<span class="button-wrapper"><input type="submit" '. (empty($element['#name']) ? '' : 'name="'. $element['#name'] .'" ')  .'id="'. $element['#id'].'" value="'. check_plain($element['#value']) .'" '. drupal_attributes($element['#attributes']) ." /></span>\n";
+  } 
 }
-
 
 function cleanr_breadcrumb($breadcrumb) {
    if (!empty($breadcrumb)) {
@@ -70,15 +69,4 @@ function cleanr_breadcrumb($breadcrumb) {
 }
 
 function cleanr_preprocess_page(&$vars){
-	// TODO: Build a top level admin menu but cached. The following code adds about 400 queries per page load.
-	/*$menu = menu_router_build();
-  foreach ($menu as $path => $item) {
-    if ($item['type'] != MENU_CALLBACK && (($item['_parts'][0] == 'admin' && count($item['_parts']) > 1) || (strpos($path, 'node/add') === 0))) {
-      if (!strpos($path, '%')) {
-        $menu_links[$path] = $item;
-        $sort[$path] = $item['_number_parts'];
-      }
-    }
-  }
-  $vars['menu_links'] = $menu_links; */
 }

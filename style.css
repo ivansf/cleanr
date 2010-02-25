@@ -285,7 +285,7 @@ fieldset.collapsed legend {
 	padding: 0 0 0 40px;
 }
 legend {
-	width: 100%;
+	width: 80%;
 	padding: 0;
 }
 legend,
@@ -366,30 +366,26 @@ div.form-item div.form-item:hover .description {
 	display: inline;
 }
 .button-wrapper {
-	display: inline-table;
-}
-.button-wrapper .inner {
-	background: url(images/button.png) top right no-repeat;
-	float: left;
-	display: block;
-	height: 33px;
-	margin: 0 0 0 15px;
-}
-.button-wrapper .button {
-	background: url(images/button.png) left bottom no-repeat;
-	float: left;
-	display: block;
-	height: 33px;
+
 }
 .button-wrapper input {
-	height: 33px;
-	line-height: 33px;
+	height: 25px;
+	line-height: 25px;
 	font-size: 12px;
 	font-family: Helvetica, Arial, sans-serif;
-	padding: 0 15px 2px 0;
-	color: #FFF;
+	padding: 0 15px 2px 15px;
+	color: #EEE;
 	text-shadow: #333;
 	clear: left;
+	background: url(images/button.png) left bottom repeat-x;
+	border: 1px solid #114d7b;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+.button-wrapper input:hover {
+	color: #FFF;
+	cursor: pointer;
 }
 dl.multiselect dt, dl.multiselect dd {
 	padding: 0 10px;
